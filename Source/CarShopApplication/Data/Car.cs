@@ -12,17 +12,17 @@ namespace Data
 
         public int Id { get; set; }
 
-        public int BrandId { get; set; }
+        public int? BrandId { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Model { get; set; }
 
-        public int CarBodyTypeId { get; set; }
+        public int? CarBodyTypeId { get; set; }
 
         public int NumberOfDoors { get; set; }
 
-        public int ManufacturerId { get; set; }
+        public int? ManufacturerId { get; set; }
 
         public short CarReleaseYear { get; set; }
 
