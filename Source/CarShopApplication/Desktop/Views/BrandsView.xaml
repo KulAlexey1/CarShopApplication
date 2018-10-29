@@ -1,0 +1,40 @@
+﻿<Window x:Class="Desktop.Views.BrandsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop.Views"
+        mc:Ignorable="d"
+        Title="Марки" MinHeight="480" MinWidth="640" SizeToContent="WidthAndHeight">
+    <Grid Margin="2">
+        <DataGrid ItemsSource="{Binding Brands}" SelectedItem="{Binding SelectedBrand}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}" Width="Auto" />
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="Auto" />
+                <DataGridHyperlinkColumn Header="Фото" Binding="{Binding Path=ImageFileName}" Width="Auto" />
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Добавить" Command="{Binding DataContext.AddCommand, RelativeSource={RelativeSource AncestorType={x:Type local:BrandsView}}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Изменить" Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource AncestorType={x:Type local:BrandsView}}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Background="Brown"
+                                    Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type local:BrandsView}}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
