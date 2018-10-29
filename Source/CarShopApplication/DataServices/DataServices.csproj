@@ -49,14 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFService\AddressRepository.cs" />
-    <Compile Include="EFService\BrandRepository.cs" />
-    <Compile Include="EFService\CarBodyTypeRepository.cs" />
-    <Compile Include="EFService\CarImageRepository.cs" />
-    <Compile Include="EFService\CarRepository.cs" />
     <Compile Include="EFService\CarShopDBContext.cs" />
-    <Compile Include="EFService\IRepository.cs" />
-    <Compile Include="EFService\ManufacturerRepository.cs" />
+    <Compile Include="EFService\GenericRepository.cs" />
+    <Compile Include="EFService\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@ namespace DataServices.EFService
     using System.Data.Entity;
     using Data;
 
-    internal class CarShopDBContext : DbContext
+    public class CarShopDBContext : DbContext
     {
         public CarShopDBContext()
             : base("name=CarShopDBContext")
